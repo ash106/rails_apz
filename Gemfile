@@ -48,4 +48,6 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'rails_12factor'
 gem 'pg'
+gem 'sidekiq'
+gem 'sinatra', require: false
 
