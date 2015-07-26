@@ -52,4 +52,5 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'dotenv-rails'
+gem 'redis-rails'
 

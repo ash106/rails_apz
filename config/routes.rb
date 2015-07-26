@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
+
+  get 'weather', to: 'weather#show'
+  get 'weather/update', to: 'weather#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
