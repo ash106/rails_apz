@@ -50,4 +50,6 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'sidekiq'
 gem 'sinatra', require: false
+gem 'recaptcha', require: 'recaptcha/rails'
+gem 'dotenv-rails'
 

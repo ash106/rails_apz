@@ -9,7 +9,7 @@ class RecommendationsController < ApplicationController
     @recommendation = Recommendation.new(article: @article,
                                          email: recommendation_params[:email])
     respond_to do |format|
-      if @recommendation.valid? && @recommendation.send?
+      if @recommendation.valid? && verify_recaptcha(model: @recommendation) && @recommendation.send?
         format.html { redirect_to articles_url, notice: 'Recommendation was successfully created.' }
         format.json { render json: @recommendation }
       else
