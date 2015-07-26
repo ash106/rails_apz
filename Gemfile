@@ -53,4 +53,5 @@ gem 'sinatra', require: false
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'dotenv-rails'
 gem 'redis-rails'
+gem 'codeclimate-test-reporter', group: :test, require: nil
 
