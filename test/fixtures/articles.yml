@@ -3,3 +3,7 @@
 one:
   title: My title has more than 10 characters
   content: My content has more than 10 characters
+
+two:
+  title: MyString
+  content: MyText

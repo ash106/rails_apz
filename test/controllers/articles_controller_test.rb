@@ -3,6 +3,7 @@ require 'test_helper'
 class ArticlesControllerTest < ActionController::TestCase
   setup do
     @article = articles(:one)
+    @article_two = articles(:two)
   end
 
   test "should get index" do
@@ -21,7 +22,15 @@ class ArticlesControllerTest < ActionController::TestCase
       post :create, article: { content: @article.content, title: @article.title }
     end
 
-    assert_redirected_to article_path(assigns(:article))
+    assert_redirected_to articles_path
+  end
+
+  test "should not create article with too short title" do
+    assert_no_difference('Article.count') do
+      post :create, article: { content: @article_two.content, title: @article_two.title }
+    end
+
+    assert_template :new
   end
 
   test "should show article" do
